@@ -9,6 +9,7 @@
             <th>Description</th>
             <th>Price</th>
             <th>Released_at</th>
+            <th>Action</th>
         </tr>
         @foreach ($comics as $comic)
             <tr>
@@ -17,6 +18,7 @@
                 <td>{{ $comic->description }}</td>
                 <td>{{ $comic->price }}</td>
                 <td>{{ $comic->released_at }}</td>
+                <td><a href="{{ route('comics.show', $comic->id) }}">View</a> | Edit | Delete</td>
             </tr>
         @endforeach
     </table>

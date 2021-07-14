@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comic;
+use Hamcrest\Type\IsNumeric;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -47,7 +48,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**
