@@ -25,7 +25,7 @@
                         action="{{ route('comics.destroy', $comic->id) }}" method='post'>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" @click="cancel()">!DELETE!</button>
+                        <button type="submit" @click="cancel($event)">!DELETE!</button>
                     </form>
                 </td>
             </tr>

@@ -19431,8 +19431,14 @@ var app = new Vue({
   el: "#app",
   data: {},
   methods: {
-    cancel: function cancel() {
-      confirm('Sei sicuro di voler eliminare definitivamente questo fumetto?');
+    cancel: function cancel(event) {
+      /* if (event) {
+          event.preventDefault();
+      }
+      confirm('Sei sicuro di voler eliminare definitivamente questo fumetto?'); */
+      if (!confirm('Sei sicuro di voler eliminare definitivamente questo fumetto?')) {
+        event.preventDefault();
+      }
     }
   }
 });
