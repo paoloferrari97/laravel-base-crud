@@ -2,6 +2,7 @@
 
 @section('main')
     <h1>Comics</h1>
+    {{-- <div id="app"> --}}
     <table style="width:100%">
         <tr>
             <th>Id</th>
@@ -24,10 +25,11 @@
                         action="{{ route('comics.destroy', $comic->id) }}" method='post'>
                         @csrf
                         @method('DELETE')
-                        <button type="submit">!DELETE!</button>
+                        <button type="submit" @click="cancel()">!DELETE!</button>
                     </form>
                 </td>
             </tr>
         @endforeach
     </table>
+    {{-- </div> --}}
 @endsection
