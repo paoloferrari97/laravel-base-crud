@@ -5,11 +5,6 @@ const app = new Vue({
     data: {},
     methods: {
         cancel(event) {
-            /* if (event) {
-                event.preventDefault();
-            }
-            confirm('Sei sicuro di voler eliminare definitivamente questo fumetto?'); */
-
             if (!confirm('Sei sicuro di voler eliminare definitivamente questo fumetto?')) {
                 event.preventDefault();
             }
