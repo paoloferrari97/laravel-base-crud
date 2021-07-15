@@ -7,5 +7,12 @@
         <li>Description: {{ $comic->description }}</li>
         <li>Price: {{ $comic->price }}</li>
         <li>Released_at: {{ $comic->released_at }}</li>
+
+        <form action="{{ route('comics.destroy', $comic->id) }}" method='post'>
+            @csrf
+            @method('DELETE')
+            <button type="submit">!DELETE!</button>
+        </form>
+
     </ol>
 @endsection
