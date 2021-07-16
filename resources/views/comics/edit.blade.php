@@ -2,6 +2,8 @@
 
 @section('main')
 
+    <h1 class="text-center">Modifica fumetto</h1>
+
     <div class="container">
 
         <form action="{{ route('comics.update', $comic->id) }}" method="post">
